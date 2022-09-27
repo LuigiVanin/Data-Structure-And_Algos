@@ -15,14 +15,18 @@ struct LinkedQueue
     int length;
 };
 
+struct LinkedQueue initLinkedQueue();
+
+struct Node* newQueueNode(int valor);
+
 bool empty(struct LinkedQueue* queue);
 
-void enqueue(struct LinkedQueue* queue, int val);
+void linked_enqueue(struct LinkedQueue* queue, int val);
 
-int desqueue(struct LinkedQueue* queue);
+int linked_desqueue(struct LinkedQueue* queue);
 
-int head(struct LinkedQueue* queue);
+int peak(struct LinkedQueue* queue);
 
-void print_queue(struct LinkedQueue* queue) ;
+void print_linked_queue(struct LinkedQueue queue) ;
 
 #endif

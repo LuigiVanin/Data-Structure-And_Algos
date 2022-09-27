@@ -10,11 +10,14 @@ add_executable(cpp-algo main.c
                lists/linkedList.c 
                include/doublyLinkedList.h 
                lists/doublyLinkedList.c 
-               hashmap/HashMap.cpp include/HashMap.h 
                sorting/quicksort.c include/quicksort.h 
                sorting/bubbleSort.c sorting/insertionSort.c
                include/arrayQueue.h
                queue/arrayQueue.c
                include/linkedQueue.h
-               queue/linkedQueue.c)
+               queue/linkedQueue.c
+               include/linear_search.h
+               search/linear_search.c
+               include/bogo_search.h
+               search/bogo_search.c)
 

@@ -12,7 +12,7 @@ struct LinkedQueue initLinkedQueue() {
     return queue;
 }
 
-struct Node* newNode(int valor) {
+struct Node* newQueueNode(int valor) {
     struct Node* cabeca = (struct Node*) malloc(sizeof(struct Node));
     cabeca->val = valor;
     cabeca->next = NULL;
@@ -28,26 +28,22 @@ bool empty(struct LinkedQueue* queue) {
     }
 }
 
-//se a queue estiver nula, instancie a queue
-//por causa da possibilidade de instanciacao usamos struct LinkedQueue**
-void enqueue(struct LinkedQueue* queue, int val) {
+void linked_enqueue(struct LinkedQueue* queue, int val) {
     if( queue == NULL || queue->length == 0){
         *queue = initLinkedQueue();
-        queue->head = newNode(val);
+        queue->head = newQueueNode(val);
         queue->tail = queue->head;
     }
     else{
         struct Node* cabeca = queue->tail;
-        cabeca->next = newNode(val);
+        cabeca->next = newQueueNode(val);
         cabeca = cabeca->next;
         queue->tail = cabeca;
     }
     queue->length++;
 }
 
-//retorne a constante INT_MIN se a queue for nula ou vazia
-//lembrem de desalocar o nó removido (free)
-int desqueue(struct LinkedQueue* queue) {
+int linked_desqueue(struct LinkedQueue* queue) {
     if ( queue == NULL || queue->length == 0){
         return INT_MIN;
     }
@@ -69,8 +65,7 @@ int desqueue(struct LinkedQueue* queue) {
     }
 }
 
-//retorne a constante INT_MIN se a queue for nula ou vazia
-int head(struct LinkedQueue* queue) {
+int peak(struct LinkedQueue* queue) {
     if ( queue == NULL || queue->length == 0){
         return INT_MIN;
     }
@@ -79,11 +74,9 @@ int head(struct LinkedQueue* queue) {
     }
 }
 
-void print_queue(struct LinkedQueue* queue) {
-    //usamos o aux para percorrer a lista
-    if (queue->head != NULL) {
-        struct Node* aux = queue->head;
-        //navega partindo da cabeça até chegar NULL
+void print_linked_queue(struct LinkedQueue queue) {
+    if (queue.head != NULL) {
+        struct Node* aux = queue.head;
         printf("_\n");
         do {
             printf("%d", aux->val);
@@ -98,3 +91,20 @@ void print_queue(struct LinkedQueue* queue) {
         printf("A lista está vazia!");
     }
 }
+
+// int main(){
+//     struct LinkedQueue queue = initLinkedQueue();
+//     printf("Alow\n");
+//     linked_enqueue(&queue, 10);
+//     linked_enqueue(&queue, 15);
+//     linked_enqueue(&queue, 30);
+//     linked_enqueue(&queue, 90);
+//     printf("%d\n", peak(&queue));
+//     print_linked_queue(queue);
+//     linked_desqueue(&queue);
+//     linked_desqueue(&queue);
+//     linked_desqueue(&queue);
+//     linked_desqueue(&queue);
+//     print_linked_queue(queue);
+//     return 0;
+// }

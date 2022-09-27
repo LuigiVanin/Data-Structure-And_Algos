@@ -7,14 +7,14 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
 -   [x] ArrayList
 -   [x] LinkedList
 -   [x] DoublyLinkedList
--   [ ] Stack
-    -   [ ] ArrayStack
-    -   [ ] LinkedStack
+-   [x] Stack
+    -   [x] ArrayStack
+    -   [x] LinkedStack
 -   [x] Queue
     -   [x] LinkedQueue
     -   [x] ArrayQueue
 -   [ ] HashMap
-    -   [ ] HashMap in place
+    -   [x] HashMap in place
     -   [ ] HashMap out of place
 -   [ ] Binary tree
 -   [ ] AVL
