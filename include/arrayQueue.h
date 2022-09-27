@@ -6,14 +6,15 @@ struct ArrayQueue
     int head;
     int tail;
     int *array;
-    int length; // tam do array
-    int max;    // max de qeue no array
+    int max; // tam do array
+    int len;    // max de qeue no array
 };
 
-struct ArrayQueue initArrayQueue(int length);
-void enqueue(struct ArrayQueue** queue, int val);
+struct ArrayQueue initArrayQueue(int max);
+void enqueue(struct ArrayQueue* queue, int val);
 int desqueue(struct ArrayQueue* queue);
 int head(struct ArrayQueue* queue);
+void print_queue(struct ArrayQueue);
 
 
 #endif

@@ -2,25 +2,38 @@
 #include <stdlib.h>
 // #include "include/arrayList.h"
 // #include "include/linkedList.h"
-#include "include/doublyLinkedList.h"
+// #include "include/doublyLinkedList.h"
+#include "include/arrayQueue.h"
 
 int main(){
    
-   
-    struct DoublyLinkedList test = initDoublyLinkedList();
-    push_back(&test, 10);
-    push_back(&test, 15);
-    push_back(&test, 2);
-    push_front(&test, 2);
-    push_front(&test, 6);
-    push_front(&test, 100);
+    struct ArrayQueue queue = initArrayQueue(10);
+    printf("Alow\n");
+    enqueue(&queue, 10);
+    enqueue(&queue, 20);
+    enqueue(&queue, 220);
+    enqueue(&queue, 16);
+
+    // printf("%d\n", queue.array[queue.tail]);
+    // printf("%d\n", desqueue(&queue));
+    // printf("%d\n", desqueue(&queue));
+    // printf("%d\n", desqueue(&queue));
+    // printf("%d\n", desqueue(&queue));
+    // printf("%d\n", desqueue(&queue));
+    // printf("%d\n", desqueue(&queue));
 
 
+    
+    print_queue(queue);
 
-    print_list(test);
-    printf("%d", item_at(test, 2));
-    // shift_list(&test);
-    print_list(test);
+    printf("\n%d - %d\n", desqueue(&queue), queue.len);
+    printf("\n%d - %d\n", desqueue(&queue), queue.len);
+    printf("\n%d - %d\n", desqueue(&queue), queue.len);
+    printf("\n%d - %d\n", desqueue(&queue), queue.len);
+    printf("\n%d - %d\n", desqueue(&queue), queue.len);
+    printf("\n%d - %d\n", desqueue(&queue), queue.len);
+
+
 
     return 0;
 }

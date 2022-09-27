@@ -12,7 +12,7 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [ ] LinkedStack
 -   [x] Queue
     -   [x] LinkedQueue
-    -   [x] ArrayStack
+    -   [x] ArrayQueue
 -   [ ] HashMap
     -   [ ] HashMap in place
     -   [ ] HashMap out of place
@@ -25,7 +25,7 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
 ## ALGOS
 
 -   [ ] Sorting
-    -   [ ] BubbleSort
+    -   [x] BubbleSort
     -   [ ] insertion Sort
     -   [ ] SelectionSort
     -   [x] QuickSort

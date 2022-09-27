@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.16.0)
 project(cpp-algo)
 
-# find_package(SDL2 REQUIRED)
 include_directories(cpp-algo)
 
 add_executable(cpp-algo main.c 
@@ -15,5 +14,7 @@ add_executable(cpp-algo main.c
                sorting/quicksort.c include/quicksort.h 
                sorting/bubbleSort.c sorting/insertionSort.c
                include/arrayQueue.h
-               queue/arrayQueue.c)
+               queue/arrayQueue.c
+               include/linkedQueue.h
+               queue/linkedQueue.c)
 

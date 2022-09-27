@@ -1,7 +1,3 @@
-//
-// Created by htnek on 19/06/22.
-//
-
 #ifndef CPP_ALGO_QUICKSORT_H
 #define CPP_ALGO_QUICKSORT_H
 
