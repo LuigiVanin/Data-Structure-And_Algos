@@ -36,6 +36,6 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
 -   [ ] Special
     -   [ ] Kennedys algorithm
 -   [ ] Search
-    -   [ ] LinearSearch
-    -   [ ] BogoSearch
+    -   [x] LinearSearch
+    -   [x] BogoSearch
     -   [ ] BinarySearch
