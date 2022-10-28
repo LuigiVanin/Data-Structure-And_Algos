@@ -5,7 +5,8 @@
 // #include "include/doublyLinkedList.h"
 // #include "include/arrayQueue.h"
 // #include "include/linkedQueue.h"
-#include "include/bogo_search.h"
+// #include "include/bogo_search.h"
+#include "include/binary_search.h"
 
 int main(){
     int *v = (int*) calloc(15, 15*sizeof(int));
@@ -13,6 +14,6 @@ int main(){
         v[i] = i;
     }
 
-    printf("%d\n", bogo_search(v, 15, 6, 100000));
+    printf("%d\n", binary_search(v, 15, 10));
     return 0;
 }

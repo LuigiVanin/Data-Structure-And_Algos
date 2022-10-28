@@ -19,5 +19,7 @@ add_executable(cpp-algo main.c
                include/linear_search.h
                search/linear_search.c
                include/bogo_search.h
-               search/bogo_search.c)
+               search/bogo_search.c
+               include/binary_search.h
+               search/binary_search.c)
 

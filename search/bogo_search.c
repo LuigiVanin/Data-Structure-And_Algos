@@ -32,19 +32,3 @@ int bogo_search(int *v, int len, int value_to_find, int max_attempts) {
 
 // #include "include/linkedQueue.h"
 
-// int main(){
-//     struct LinkedQueue queue = initLinkedQueue();
-//     printf("Alow\n");
-//     linked_enqueue(&queue, 10);
-//     linked_enqueue(&queue, 15);
-//     linked_enqueue(&queue, 30);
-//     linked_enqueue(&queue, 90);
-//     printf("%d\n", peak(&queue));
-//     print_linked_queue(queue);
-//     linked_desqueue(&queue);
-//     linked_desqueue(&queue);
-//     linked_desqueue(&queue);
-//     linked_desqueue(&queue);
-//     print_linked_queue(queue);
-//     return 0;
-// }
