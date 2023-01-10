@@ -12,6 +12,7 @@ add_executable(cpp-algo main.c
                lists/doublyLinkedList.c 
                sorting/quicksort.c include/quicksort.h 
                sorting/bubbleSort.c sorting/insertionSort.c
+               include/insertionSort.h
                include/arrayQueue.h
                queue/arrayQueue.c
                include/linkedQueue.h
@@ -21,5 +22,11 @@ add_executable(cpp-algo main.c
                include/bogo_search.h
                search/bogo_search.c
                include/binary_search.h
-               search/binary_search.c)
+               search/binary_search.c
+               sorting/selectionSort.c
+               include/selectionSort.h
+               include/bogo_sort.h
+               sorting/bogo_sort.c
+               include/graph.h
+               graph/graph.c)
 

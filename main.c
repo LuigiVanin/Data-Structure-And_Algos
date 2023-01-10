@@ -6,14 +6,39 @@
 // #include "include/arrayQueue.h"
 // #include "include/linkedQueue.h"
 // #include "include/bogo_search.h"
-#include "include/binary_search.h"
+// #include "include/binary_search.h"
+// #include "include/insertionSort.h"
+#include "include/bogo_sort.h"
+#include <time.h>
+// #include "include/selectionSort.h"
+
+const int SIZE = 3;
 
 int main(){
-    int *v = (int*) calloc(15, 15*sizeof(int));
-    for (int i = 0; i < 15; i++) {
+    int *v = (int*) calloc(SIZE, SIZE*sizeof(int));
+    srand(time(NULL));
+
+    for (int i = 0; i < SIZE; i++) {
         v[i] = i;
     }
 
-    printf("%d\n", binary_search(v, 15, 10));
+    // populate v array with random numbers
+    for (int i = 0; i < SIZE; i++) {
+        v[i] = rand() % 100;
+    }
+
+    printf("[\n\t");
+    for (int i = 0; i < SIZE; i++) {
+        printf("%d ", v[i]);
+    }
+    printf("\n]\n");
+
+    
+    bogo_sort(v, SIZE);
+    printf("[\n\t");
+    for (int i = 0; i < SIZE; i++) {
+        printf("%d ", v[i]);
+    }
+    printf("\n]");
     return 0;
 }

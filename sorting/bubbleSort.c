@@ -1,3 +1,5 @@
+#include "../include/bubbleSort.h"
+
 
 void bubble_sort(int *v, int len) {
     for(int i = 0; i < len; i++) {
