@@ -35,8 +35,9 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
 
 -   [ ] Sorting
     -   [x] BubbleSort
-    -   [ ] insertion Sort
-    -   [ ] SelectionSort
+    -   [x] insertion Sort
+    -   [x] SelectionSort
+    -   [x] BogoSort
     -   [x] QuickSort
     -   [ ] MergeSort
 -   [ ] Dynamic programming
