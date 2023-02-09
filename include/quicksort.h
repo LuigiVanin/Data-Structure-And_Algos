@@ -1,9 +1,7 @@
 #ifndef CPP_ALGO_QUICKSORT_H
 #define CPP_ALGO_QUICKSORT_H
 
-void quickSort(int* v, int ini, int fim);
-
-void swap(int* v, int i, int j);
+void quick_sort(int* v, int ini, int fim);
 
 int partition(int* v, int ini, int fim);
 

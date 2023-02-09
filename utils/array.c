@@ -1,6 +1,26 @@
-// swap arrat position function
+#include "../include/utils.h"
+#include <time.h>
 
+void swap(int* v, int i, int j){
+    int temp = v[i];
+    v[i] = v[j];
+    v[j] = temp;
+}
 
-// shuffle array
+void shuffle(int *array, int size) {
+    srand(time(NULL));
 
-// is sorted function
+    for (int i = 0; i < size; i++) {
+        int j = rand() % size;
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+bool is_sorted(int *array, int size) {
+    for(int i = 0; i < size - 1 ; i++) {
+        if (array[i] > array[i+1]) return false;
+    }
+    return true;
+}

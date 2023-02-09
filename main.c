@@ -7,10 +7,11 @@
 // #include "include/linkedQueue.h"
 // #include "include/bogo_search.h"
 // #include "include/binary_search.h"
-// #include "include/insertionSort.h"
-#include "include/bogo_sort.h"
+#include "include/insertionSort.h"
+// #include "include/bogo_sort.h"
 #include <time.h>
-// #include "include/selectionSort.h"
+// #include "include/bubbleSort.h"
+// #include "include/quicksort.h"
 
 const int SIZE = 3;
 
@@ -34,7 +35,9 @@ int main(){
     printf("\n]\n");
 
     
-    bogo_sort(v, SIZE);
+    // bogo_sort(v, SIZE);
+    printf("insertion Sort\n");
+    insertion_sort(v, SIZE);
     printf("[\n\t");
     for (int i = 0; i < SIZE; i++) {
         printf("%d ", v[i]);

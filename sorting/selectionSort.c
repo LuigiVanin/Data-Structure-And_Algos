@@ -1,4 +1,5 @@
 #include "../include/selectionSort.h"
+#include "../include/utils.h"
 
 void selection_sort(int* v, int size){
     int min = 0;
@@ -10,12 +11,6 @@ void selection_sort(int* v, int size){
             }
         }
 
-        swap_p(v, i, min);
+        swap(v, i, min);
     }
-}
-
-void swap_p(int* v, int i, int j){
-    int temp = v[i];
-    v[i] = v[j];
-    v[j] = temp;
 }
