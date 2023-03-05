@@ -9,7 +9,7 @@ struct ArrayList {
 
 struct ArrayList InitArrayList(int capacidade);
 
-void printLista(struct ArrayList list);
+void printList(struct ArrayList list);
 
 void push_item(struct ArrayList *list, int value);
 

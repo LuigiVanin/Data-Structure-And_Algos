@@ -5,10 +5,15 @@
 #ifndef CPP_ALGO_HASHMAP_H
 #define CPP_ALGO_HASHMAP_H
 
-
-class HashMap{
-
+class HashMap
+{
 };
 
+struct HashMapNode
+{
+    int key;
+    int value;
+    HashMapNode *next;
+};
 
-#endif //CPP_ALGO_HASHMAP_H
+#endif // CPP_ALGO_HASHMAP_H

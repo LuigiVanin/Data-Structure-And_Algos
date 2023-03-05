@@ -10,7 +10,7 @@ struct ArrayList InitArrayList(int capacidade){
     return lista;
 }
 
-void printLista(struct ArrayList list){
+void printList(struct ArrayList list){
     printf("[");
     for(int i = 0; i < list.tamanho; i++){
         printf("%d, ", list.array[i]);

@@ -3,6 +3,7 @@
         ".env": "ini",
         "arraylist.h": "c",
         "doublylinkedlist.h": "c",
-        "linkedqueue.h": "c"
+        "linkedqueue.h": "c",
+        "string_view": "c"
     }
 }

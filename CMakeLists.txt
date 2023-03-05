@@ -27,8 +27,8 @@ add_executable(cpp-algo main.c
                include/selectionSort.h
                include/bogo_sort.h
                sorting/bogo_sort.c
-               include/graph.h
-               graph/graph.c
+               include/graph_adj.h
+               graph/graph_adj.c
                include/utils.h
                utils/array.c)
 
