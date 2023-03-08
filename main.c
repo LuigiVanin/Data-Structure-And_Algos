@@ -26,6 +26,9 @@ int main() {
     graph.add_edge(&graph, 0, 1); // 0 -> 1
     graph.add_edge(&graph, 0, 3); // 0 -> 3
     graph.add_edge(&graph, 0, 0); // 0 -> 0
+    graph.add_edge(&graph, 3, 1); // 3 -> 1
+
+    graph.print(&graph);
 
     return 0;
 }

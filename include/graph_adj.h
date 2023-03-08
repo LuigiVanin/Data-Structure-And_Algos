@@ -12,13 +12,16 @@ struct Graph {
 
     void (*add_edge)(struct Graph *self, int vertex, int value);
     void (*add_vertex)(struct Graph *self);
+    void (*print)(struct Graph *self);
 };
 
 void __add_vertex(struct Graph *self );
 
 void __add_edge(struct Graph *self, int vertex, int value );
 
-void __resize_graph(struct Graph *graph);
+void __resize_graph(struct Graph *self);
+
+void __print_graph_adj(struct Graph *self);
 
 struct Graph newGraph();
 

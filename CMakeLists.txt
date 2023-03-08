@@ -30,5 +30,7 @@ add_executable(cpp-algo main.c
                include/graph_adj.h
                graph/graph_adj.c
                include/utils.h
-               utils/array.c)
+               utils/array.c
+               include/bfs.h
+               graph/bfs.c)
 
