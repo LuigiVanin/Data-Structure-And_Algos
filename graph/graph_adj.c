@@ -7,7 +7,9 @@ void __resize_graph(struct Graph *self ) {
         self->array = (struct ArrayList*) realloc(self->array, self->capacity * sizeof(struct ArrayList*));
 }
 
-
+// TODO: This should be the representation of a undirectional graph
+// so when adding a edgem the edge in question should be present on both vertex
+// in other words, you have to push on both vertexs
 void __add_edge(struct Graph *self, int vertex, int value ) {
     if (self->length - 1 < vertex) {
         printf("Não há vertice com esse label %d", vertex);
@@ -27,7 +29,6 @@ void __add_edge(struct Graph *self, int vertex, int value ) {
 
 void __add_vertex(struct Graph *self ) {
     if (self->length == self->capacity) {
-        // caso não funcione voltar para a alternativa anterior
         __resize_graph(self);
     }
     self->array[self->length] = InitArrayList(8);

@@ -24,3 +24,11 @@ bool is_sorted(int *array, int size) {
     }
     return true;
 }
+
+void print_boolean_areray(bool *array, int len) {
+    printf("\n[");
+    for(int i = 0; i < len; i++) {
+        printf("%d, ", array[i]);
+    }
+    printf("]\n");
+}

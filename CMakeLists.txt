@@ -31,6 +31,6 @@ add_executable(cpp-algo main.c
                graph/graph_adj.c
                include/utils.h
                utils/array.c
-               include/bfs.h
-               graph/bfs.c)
+               include/dfs.h
+               graph/dfs.c)
 

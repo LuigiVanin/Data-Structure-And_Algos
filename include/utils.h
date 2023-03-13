@@ -6,5 +6,6 @@
 void swap(int *v, int i, int j);
 bool is_sorted(int *array, int size);
 void shuffle(int *array, int size);
+void print_boolean_areray(bool *array, int len);
 
 #endif

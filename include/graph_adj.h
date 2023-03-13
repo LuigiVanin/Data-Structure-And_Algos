@@ -4,6 +4,7 @@
 
 #include "../include/arrayList.h"
 
+// NOTE: Esse grafo é a representação de um grafo adirecional(aponta para ambos os sentidos)
 struct Graph {
     int length;
     struct ArrayList *array;
