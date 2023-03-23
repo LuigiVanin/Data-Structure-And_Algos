@@ -7,9 +7,6 @@ void __resize_graph(struct Graph *self ) {
         self->array = (struct ArrayList*) realloc(self->array, self->capacity * sizeof(struct ArrayList*));
 }
 
-// TODO: This should be the representation of a undirectional graph
-// so when adding a edgem the edge in question should be present on both vertex
-// in other words, you have to push on both vertexs
 void __add_edge(struct Graph *self, int vertex, int value ) {
     if (self->length - 1 < vertex) {
         printf("Não há vertice com esse label %d", vertex);
@@ -23,7 +20,9 @@ void __add_edge(struct Graph *self, int vertex, int value ) {
         );
         return;
     }
+    // By pushing the vertex on both sides this garantees that this graph is adimensional
     push_item(&self->array[vertex], value);
+    push_item(&self->array[value], vertex);
     printf("add_edge %d -> %d\n", vertex, value);
 }
 
@@ -70,7 +69,7 @@ struct Graph newGraph() {
 //     graph.add_vertex(&graph); // label: 2
 //     graph.add_vertex(&graph); // label: 3
 
-//     graph.add_edge(&graph, 0, 1); // 0 -> 1
+//     graph.add_edge(&graph, 0, 1); // 0 -> 1 | 1 -> 0
 //     graph.add_edge(&graph, 0, 3); // 0 -> 3
 //     graph.add_edge(&graph, 0, 0); // 0 -> 0
 

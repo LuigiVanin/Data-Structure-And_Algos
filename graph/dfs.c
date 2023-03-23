@@ -12,6 +12,8 @@ void dfs(struct Graph *graph, bool *visited, int index)
     }
 }
 
+void dfsStack(struct Graph *graph, bool *visited, int index) {}
+
 int reach_from_pos_0(struct Graph *graph)
 {
     bool *visited = (bool *)calloc(graph->length, sizeof(bool));
@@ -45,7 +47,7 @@ int how_many_components(struct Graph *graph) {
 bool vertex_connected(struct Graph *graph, int v1, int v2) {
     bool *visited = (bool *)calloc(graph->length, sizeof(bool));
     dfs(graph, visited, v1);
-    if (!visited[v2]) {
+    if  (visited[v2]) {
         return false;
     }
     return true;

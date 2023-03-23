@@ -27,12 +27,12 @@ int main() {
     graph.add_vertex(&graph); // label: 5
 
 
-    graph.add_edge(&graph, 0, 1); // 0 -> 1
-    graph.add_edge(&graph, 0, 3); // 0 -> 3
-    graph.add_edge(&graph, 0, 0); // 0 -> 0
-    graph.add_edge(&graph, 3, 1); // 3 -> 1
-    graph.add_edge(&graph, 5, 4); // 5 -> 4
-    graph.add_edge(&graph, 4, 5); // 5 -> 4
+    graph.add_edge(&graph, 0, 1); // 0 -> 1 | 1 -> 0
+    // graph.add_edge(&graph, 0, 3); // 0 -> 3
+    // graph.add_edge(&graph, 0, 0); // 0 -> 0
+    // graph.add_edge(&graph, 3, 1); // 3 -> 1
+    // graph.add_edge(&graph, 5, 4); // 5 -> 4
+    // graph.add_edge(&graph, 4, 5); // 5 -> 4
 
 
 
