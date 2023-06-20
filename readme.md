@@ -7,8 +7,7 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
 ```sh
 > cmake . -B ./build/
 > cd build/
-> make
-> ./cpp-algo
+> make && ./cpp-algo
 ```
 
 ## DATA STRUCTURES
@@ -27,12 +26,16 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [ ] HashMap out of place
 -   [ ] Binary tree
 -   [ ] AVL
--   [ ] Graphs
-    -   [ ] Table
-    -   [ ] Adj
+-   [x] Graphs
+    -   [x] Table
+    -   [x] Adj
 
 ## ALGOS
 
+-   [x] Search
+    -   [x] LinearSearch
+    -   [x] BogoSearch
+    -   [x] BinarySearch
 -   [ ] Sorting
     -   [x] BubbleSort
     -   [x] insertion Sort
@@ -40,15 +43,16 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [x] BogoSort
     -   [x] QuickSort
     -   [ ] MergeSort
+-   [ ] Graph
+    -   [x] DFS recursive
+    -   [x] DFS stack
+    -   [ ] BFS
+    -   [ ] Dijkstra
 -   [ ] Dynamic programming
     -   [ ] LIS
     -   [ ] Books
 -   [ ] Special
     -   [ ] Kennedys algorithm
--   [x] Search
-    -   [x] LinearSearch
-    -   [x] BogoSearch
-    -   [x] BinarySearch
 
 ## Ferramentas Utilizadas 🛠️
 
