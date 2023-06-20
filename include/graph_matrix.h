@@ -11,5 +11,8 @@ struct MatrixGraph
 };
 
 struct MatrixGraph new_graph(int n);
+void print_matrix_graph(struct MatrixGraph g);
+void free_matrix_graph(struct MatrixGraph g);
+void add_vertex(struct MatrixGraph *g, int i, int j, int value);
 
 #endif

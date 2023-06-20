@@ -1,6 +1,7 @@
 #include "../include/graph_matrix.h"
 #include <stdlib.h>
 
+// It good to know that there is also the implementation of the dfs and bfs for graph matrix.
 struct MatrixGraph new_graph(int n) {
     struct MatrixGraph g;
     g.m = n;
@@ -11,4 +12,29 @@ struct MatrixGraph new_graph(int n) {
     }
 
     return g;
+}
+
+void free_matrix_graph(struct MatrixGraph g) 
+{
+    for (size_t i = 0; i < g.n; i++) {
+        free(g.edges[i]);
+    }
+    free(g.edges);
+}
+
+void add_vertex(struct MatrixGraph *g, int i, int j, int value ) {
+    g->edges[i][j] = value;
+    g->edges[j][i] = value; 
+}
+
+void print_matrix_graph(struct MatrixGraph g) {
+    printf("[ ");
+    for (size_t i = 0; i < g.n; i++) {
+        printf("\n\t[ ");
+        for(size_t j = 0; j < g.m; j++) {
+            printf("%d, ", g.edges[i][j]);
+        }
+        printf("]\n");
+    }
+    printf("]\n");
 }

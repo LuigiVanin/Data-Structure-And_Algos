@@ -49,6 +49,7 @@ void __print_graph_adj(struct Graph *self) {
     }
     return;
 }   
+
 struct Graph newGraph() {
     struct Graph g;
     g.length = 0;
