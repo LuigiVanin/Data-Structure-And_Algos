@@ -22,7 +22,6 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [x] LinkedQueue
     -   [x] ArrayQueue
 -   [ ] HashMap
-    -   [x] HashMap in place
     -   [ ] HashMap out of place
 -   [ ] Binary tree
 -   [ ] AVL
@@ -46,11 +45,8 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
 -   [ ] Graph
     -   [x] DFS recursive
     -   [x] DFS stack
-    -   [ ] BFS
+    -   [x] BFS
     -   [ ] Dijkstra
--   [ ] Dynamic programming
-    -   [ ] LIS
-    -   [ ] Books
 -   [ ] Special
     -   [ ] Kennedys algorithm
 

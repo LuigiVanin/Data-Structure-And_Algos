@@ -37,7 +37,9 @@ bool vertex_connected_bfs(struct Graph *graph, int v1, int v2)
     bfs(graph, visited, v1);
 
     if  (!visited[v2]) {
+        free(visited);
         return false;
     }
+    free(visited);
     return true;
 }
