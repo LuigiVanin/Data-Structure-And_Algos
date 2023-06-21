@@ -1,4 +1,5 @@
 #include "../include/graph_matrix.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 // It good to know that there is also the implementation of the dfs and bfs for graph matrix.
@@ -38,3 +39,16 @@ void print_matrix_graph(struct MatrixGraph g) {
     }
     printf("]\n");
 }
+
+
+// int main() {   
+//     struct MatrixGraph graph = new_graph(SIZE);
+//     add_vertex(&graph, 0, 0, 2);
+//     add_vertex(&graph, 2, 1, 1);
+//     add_vertex(&graph, 0, 3, 12);
+//     add_vertex(&graph, 2, 3, 10);
+//     print_matrix_graph(graph);
+//     free_matrix_graph(graph);
+
+//     return 0;
+// }

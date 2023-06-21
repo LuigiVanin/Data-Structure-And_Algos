@@ -34,5 +34,10 @@ add_executable(cpp-algo main.c
                include/dfs.h
                graph/dfs.c
                graph/graph_matrix.c 
-               include/graph_matrix.h)
+               include/graph_matrix.h
+               include/bfs.h
+               graph/bfs.c)
+
+
+
 
