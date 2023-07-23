@@ -3,5 +3,4 @@
 
 void selection_sort(int *v, int size);
 
-
 #endif

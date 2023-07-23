@@ -17,16 +17,16 @@ struct LinkedQueue
 
 struct LinkedQueue initLinkedQueue();
 
-struct Node* newQueueNode(int valor);
+struct Node *newQueueNode(int valor);
 
-bool empty(struct LinkedQueue* queue);
+bool empty(struct LinkedQueue *queue);
 
-void linked_enqueue(struct LinkedQueue* queue, int val);
+void linked_enqueue(struct LinkedQueue *queue, int val);
 
-int linked_desqueue(struct LinkedQueue* queue);
+int linked_desqueue(struct LinkedQueue *queue);
 
-int peak(struct LinkedQueue* queue);
+int peak(struct LinkedQueue *queue);
 
-void print_linked_queue(struct LinkedQueue queue) ;
+void print_linked_queue(struct LinkedQueue queue);
 
 #endif

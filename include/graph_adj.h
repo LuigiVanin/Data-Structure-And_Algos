@@ -5,7 +5,8 @@
 #include "../include/arrayList.h"
 
 // NOTE: Esse grafo é a representação de um grafo adirecional(aponta para ambos os sentidos)
-struct Graph {
+struct Graph
+{
     int length;
     struct ArrayList *array;
     int capacity;
@@ -16,9 +17,9 @@ struct Graph {
     void (*print)(struct Graph *self);
 };
 
-void __add_vertex(struct Graph *self );
+void __add_vertex(struct Graph *self);
 
-void __add_edge(struct Graph *self, int vertex, int value );
+void __add_edge(struct Graph *self, int vertex, int value);
 
 void __resize_graph(struct Graph *self);
 

@@ -1,7 +1,8 @@
 #ifndef CPPALGOS_ARRAYLIST_H
 #define CPPALGOS_ARRAYLIST_H
 
-struct ArrayList {
+struct ArrayList
+{
     int capacidade;
     int tamanho;
     int *array;
@@ -15,7 +16,7 @@ void push_item(struct ArrayList *list, int value);
 
 void double_size(struct ArrayList *list);
 
-void change_item(struct ArrayList *list, int pos,int valor);
+void change_item(struct ArrayList *list, int pos, int valor);
 
 int remove_item(struct ArrayList *list);
 

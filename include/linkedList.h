@@ -1,9 +1,9 @@
-#define CPPALGOS_LINKEDLIST_H 
+#define CPPALGOS_LINKEDLIST_H
 #ifdef CPPALGOS_LINKEDLIST_H
 
 #include <stdlib.h>
 
-struct Node 
+struct Node
 {
     int value;
     struct Node *next;
@@ -17,9 +17,9 @@ struct LinkedList
 
 struct LinkedList initLinkedList();
 
-struct Node* newNode(int value);
+struct Node *newNode(int value);
 
-void push(struct LinkedList *list , int value);
+void push(struct LinkedList *list, int value);
 
 int getElement(struct LinkedList list, int index);
 
