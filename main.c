@@ -20,7 +20,8 @@
 
 const int SIZE = 4;
 
-int main() {   
+int main()
+{
     struct Graph graph = newGraph();
     graph.add_vertex(&graph); // label: 0
     graph.add_vertex(&graph); // label: 1
@@ -38,7 +39,13 @@ int main() {
     graph.add_edge(&graph, 0, 2); // 4 -> 2 | 2 -> 4
     graph.add_edge(&graph, 2, 4); // 4 -> 2 | 2 -> 4
 
-    dijkstra(&graph, 0);
+    int *distances = dijkstra(&graph, 0);
+    printf("[");
+    for (size_t i = 0; i < graph.length; i++)
+    {
+        printf("%d ", distances[i]);
+    }
+    printf("]\n");
 
     return 0;
 }
