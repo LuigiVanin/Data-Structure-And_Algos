@@ -42,11 +42,11 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [x] BogoSort
     -   [x] QuickSort
     -   [ ] MergeSort
--   [ ] Graph
+-   [x] Graph
     -   [x] DFS recursive
     -   [x] DFS stack
     -   [x] BFS
-    -   [ ] Dijkstra
+    -   [x] Dijkstra
 -   [ ] Special
     -   [ ] Kennedys algorithm
 

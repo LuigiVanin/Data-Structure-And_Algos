@@ -29,15 +29,17 @@ int main()
     graph.add_vertex(&graph); // label: 3
     graph.add_vertex(&graph); // label: 4
     graph.add_vertex(&graph); // label: 5
+    graph.add_vertex(&graph); // label: 6
 
-    graph.add_edge(&graph, 0, 1); // 0 -> 1 | 1 -> 0
-    graph.add_edge(&graph, 1, 3); // 0 -> 3 | 3 -> 0
-    graph.add_edge(&graph, 1, 5); // 0 -> 3 | 3 -> 0
-    graph.add_edge(&graph, 3, 4); // 0 -> 0
-    graph.add_edge(&graph, 2, 5); // 0 -> 3 | 3 -> 0
-    graph.add_edge(&graph, 3, 2); // 3 -> 2 | 2 -> 3
-    graph.add_edge(&graph, 0, 2); // 4 -> 2 | 2 -> 4
-    graph.add_edge(&graph, 2, 4); // 4 -> 2 | 2 -> 4
+    graph.add_edge(&graph, 0, 1);
+    graph.add_edge(&graph, 1, 3);
+    graph.add_edge(&graph, 1, 5);
+    graph.add_edge(&graph, 3, 4);
+    graph.add_edge(&graph, 2, 5);
+    graph.add_edge(&graph, 3, 2);
+    graph.add_edge(&graph, 0, 2);
+    graph.add_edge(&graph, 2, 4);
+    graph.add_edge(&graph, 4, 6);
 
     int *distances = dijkstra(&graph, 0);
     printf("[");
