@@ -4,7 +4,8 @@
 #include <stdbool.h>
 #include <limits.h>
 
-struct LinkedQueue initLinkedQueue() {
+struct LinkedQueue initLinkedQueue()
+{
     struct LinkedQueue queue;
     queue.length = 0;
     queue.tail = NULL;
@@ -12,30 +13,37 @@ struct LinkedQueue initLinkedQueue() {
     return queue;
 }
 
-struct Node* newQueueNode(int valor) {
-    struct Node* cabeca = (struct Node*) malloc(sizeof(struct Node));
+struct Node *newQueueNode(int valor)
+{
+    struct Node *cabeca = (struct Node *)malloc(sizeof(struct Node));
     cabeca->val = valor;
     cabeca->next = NULL;
     return cabeca;
 }
 
-bool empty(struct LinkedQueue* queue) {
-    if( queue == NULL || queue->length == 0){
+bool empty(struct LinkedQueue *queue)
+{
+    if (queue == NULL || queue->length == 0)
+    {
         return true;
     }
-    else{
+    else
+    {
         return false;
     }
 }
 
-void linked_enqueue(struct LinkedQueue* queue, int val) {
-    if( queue == NULL || queue->length == 0){
+void linked_enqueue(struct LinkedQueue *queue, int val)
+{
+    if (queue == NULL || queue->length == 0)
+    {
         *queue = initLinkedQueue();
         queue->head = newQueueNode(val);
         queue->tail = queue->head;
     }
-    else{
-        struct Node* cabeca = queue->tail;
+    else
+    {
+        struct Node *cabeca = queue->tail;
         cabeca->next = newQueueNode(val);
         cabeca = cabeca->next;
         queue->tail = cabeca;
@@ -43,19 +51,24 @@ void linked_enqueue(struct LinkedQueue* queue, int val) {
     queue->length++;
 }
 
-int linked_desqueue(struct LinkedQueue* queue) {
-    if ( queue == NULL || queue->length == 0){
+int linked_desqueue(struct LinkedQueue *queue)
+{
+    if (queue == NULL || queue->length == 0)
+    {
         return INT_MIN;
     }
-    else{
-        struct Node* aux = queue->head;
+    else
+    {
+        struct Node *aux = queue->head;
         int tmp = aux->val;
-        if(aux->next != NULL){
+        if (aux->next != NULL)
+        {
             aux = aux->next;
             free(queue->head);
             queue->head = aux;
         }
-        else{
+        else
+        {
             queue->head = NULL;
             queue->tail = NULL;
             free(queue->head);
@@ -65,29 +78,37 @@ int linked_desqueue(struct LinkedQueue* queue) {
     }
 }
 
-int peak(struct LinkedQueue* queue) {
-    if ( queue == NULL || queue->length == 0){
+int peak(struct LinkedQueue *queue)
+{
+    if (queue == NULL || queue->length == 0)
+    {
         return INT_MIN;
     }
-    else{
+    else
+    {
         return queue->head->val;
     }
 }
 
-void print_linked_queue(struct LinkedQueue queue) {
-    if (queue.head != NULL) {
-        struct Node* aux = queue.head;
+void print_linked_queue(struct LinkedQueue queue)
+{
+    if (queue.head != NULL)
+    {
+        struct Node *aux = queue.head;
         printf("_\n");
-        do {
+        do
+        {
             printf("%d", aux->val);
             aux = aux->next;
-            if (aux != NULL) {
+            if (aux != NULL)
+            {
                 printf("\n ");
             }
         } while (aux != NULL);
         printf("\n_\n");
     }
-    else {
+    else
+    {
         printf("A lista está vazia!");
     }
 }

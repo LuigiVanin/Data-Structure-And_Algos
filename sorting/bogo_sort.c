@@ -4,8 +4,10 @@
 #include <stdlib.h>
 #include "../include/utils.h"
 
-void bogo_sort(int *array, int size) {
-    while (!is_sorted(array, size)) {
+void bogo_sort(int *array, int size)
+{
+    while (!is_sorted(array, size))
+    {
 
         shuffle(array, size);
     }

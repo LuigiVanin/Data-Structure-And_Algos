@@ -4,15 +4,19 @@
 
 // This is horrible 😂😂, y I am doing this... 4 real lol
 
-int bogo_search(int *v, int len, int value_to_find, int max_attempts) {
+int bogo_search(int *v, int len, int value_to_find, int max_attempts)
+{
     srand(time(NULL));
-    if( max_attempts <= 0) max_attempts=15*len;
+    if (max_attempts <= 0)
+        max_attempts = 15 * len;
     int count = 0;
-    while( count < max_attempts) {
+    while (count < max_attempts)
+    {
         int rand_idx = rand() % len;
-        if(v[rand_idx] == value_to_find) {
+        if (v[rand_idx] == value_to_find)
+        {
             return rand_idx;
-        }  
+        }
         count++;
     }
     return -1;
@@ -31,4 +35,3 @@ int bogo_search(int *v, int len, int value_to_find, int max_attempts) {
 // }
 
 // #include "include/linkedQueue.h"
-

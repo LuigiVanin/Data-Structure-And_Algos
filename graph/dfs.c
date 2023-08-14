@@ -6,23 +6,28 @@
 void dfs(struct Graph *graph, bool *visited, int index)
 {
     visited[index] = true;
-    for (int i = 0; i < graph->array[index].tamanho; i++) {
-        if (!visited[graph->array[index].array[i]]) {
+    for (int i = 0; i < graph->array[index].tamanho; i++)
+    {
+        if (!visited[graph->array[index].array[i]])
+        {
             dfs(graph, visited, graph->array[index].array[i]);
         }
     }
 }
 
-void dfs_stack(struct Graph *graph, bool *visited, int index) 
+void dfs_stack(struct Graph *graph, bool *visited, int index)
 {
     struct ArrayList stack = InitArrayList(8);
     push_item(&stack, index);
-    while(!stack.tamanho) {
+    while (!stack.tamanho)
+    {
         int s = stack.array[stack.tamanho - 1];
         remove_item(&stack);
-        if (!visited[s]) visited[s] = true;
+        if (!visited[s])
+            visited[s] = true;
 
-        for (int i = 0; i < graph->array[s].tamanho; i++) {
+        for (int i = 0; i < graph->array[s].tamanho; i++)
+        {
             push_item(&stack, graph->array[s].array[i]);
         }
     }
@@ -42,28 +47,31 @@ int reach_from_pos_0(struct Graph *graph)
 // NOTE: Para grafo adirecionais uma simples dfs com um array de vértices visitados é o suficiente
 // para concluir a atividade, mas para casos de grafos direcionais existem outro algoritmos
 // https://en.wikipedia.org/wiki/Strongly_connected_component - não irei entrar nisso
-int how_many_components(struct Graph *graph) 
+int how_many_components(struct Graph *graph)
 {
     bool *visited = (bool *)calloc(graph->length, sizeof(bool));
     int count = 0;
-    for(int i = 0; i < graph->length; i++) {
-        if (!visited[i]) {
+    for (int i = 0; i < graph->length; i++)
+    {
+        if (!visited[i])
+        {
             count++;
             dfs(graph, visited, i);
         }
     }
 
     free(visited);
-    return count;   
+    return count;
 }
 
 // NOTE: novamente, essa  solução para um caso de grafo adirecinal, para
 // para grafos direcionais o buraco é mais embaixo - não iremos entrar nisso
-bool vertex_connected(struct Graph *graph, int v1, int v2) 
+bool vertex_connected(struct Graph *graph, int v1, int v2)
 {
     bool *visited = (bool *)calloc(graph->length, sizeof(bool));
     dfs(graph, visited, v1);
-    if  (visited[v2]) {
+    if (visited[v2])
+    {
         return false;
     }
     return true;
@@ -87,9 +95,8 @@ bool vertex_connected(struct Graph *graph, int v1, int v2)
 //     graph.print(&graph);
 
 //     printf(
-//         "number of components: %d\n",  
+//         "number of components: %d\n",
 //         how_many_components(&graph)
 //     );
 //     return 0;
 // }
-

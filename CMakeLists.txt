@@ -38,7 +38,10 @@ add_executable(cpp-algo main.c
                include/bfs.h
                graph/bfs.c
                include/dijkstra.h
-               graph/dijkstra.c)
+               graph/dijkstra.c
+               include/bst.h
+               bst/bst.c
+               )
 
 
 

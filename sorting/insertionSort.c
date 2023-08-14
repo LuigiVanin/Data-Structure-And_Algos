@@ -5,13 +5,17 @@
 #include "../include/utils.h"
 #include <stdio.h>
 
-void insertion_sort(int *v, int size) {
-    for(int i = 0; i < size; i++) {
+void insertion_sort(int *v, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         // printf("%d\n", v[i]);
-        for(int j = i - 1 ;  j >= 0; j--) {
-            if (v[j + 1] < v[j]) swap(v, j, j + 1);
-            else break;
-        } 
-
+        for (int j = i - 1; j >= 0; j--)
+        {
+            if (v[j + 1] < v[j])
+                swap(v, j, j + 1);
+            else
+                break;
+        }
     }
 }

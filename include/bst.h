@@ -17,24 +17,10 @@ struct Bst
     int deepth;
 };
 
-struct Bst *init_bst()
-{
-    struct Bst *bst = (struct Bst *)malloc(sizeof(struct Bst));
-    bst->amount = 0;
-    bst->deepth = 0;
-    bst->head = NULL;
+struct Bst *init_bst();
 
-    return bst;
-}
+struct BstNode *create_bst_node(int value);
 
-struct BstNode *create_bst_node(int value)
-{
-    struct BstNode *node = (struct BstNode *)malloc(sizeof(struct BstNode));
-    node->value = value;
-    node->right = NULL;
-    node->left = NULL;
-
-    return node;
-}
+void insert_bst(struct Bst *bst, int value);
 
 #endif
