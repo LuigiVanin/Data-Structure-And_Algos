@@ -8,16 +8,17 @@ struct BstNode
     int value;
     struct BstNode *left;
     struct BstNode *right;
+    struct BstNode *parent;
 };
 
 struct Bst
 {
-    struct BstNode *head;
+    struct BstNode *root;
     int amount;
     int deepth;
 };
 
-struct Bst *init_bst();
+struct Bst init_bst();
 
 struct BstNode *create_bst_node(int value);
 

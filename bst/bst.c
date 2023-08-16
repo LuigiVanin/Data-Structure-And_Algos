@@ -1,11 +1,12 @@
 #include "../include/bst.h"
+#include <stdio.h>
 
-struct Bst *init_bst()
+struct Bst init_bst()
 {
-    struct Bst *bst = (struct Bst *)malloc(sizeof(struct Bst));
-    bst->amount = 0;
-    bst->deepth = 0;
-    bst->head = NULL;
+    struct Bst bst;
+    bst.amount = 0;
+    bst.deepth = 0;
+    bst.root = NULL;
 
     return bst;
 }
@@ -16,29 +17,64 @@ struct BstNode *create_bst_node(int value)
     node->value = value;
     node->right = NULL;
     node->left = NULL;
-
+    node->parent = NULL;
     return node;
+}
+
+int max(int a, int b)
+{
+    if (a > b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
 }
 
 void insert_bst(struct Bst *bst, int value)
 {
-    if (bst == NULL)
-    {
-        printf("BST is NULL\n");
-        bst = init_bst();
-    }
 
-    if (bst->head == NULL)
+    if (bst->root == NULL)
     {
-        bst->head = create_bst_node(value);
+        printf("THE TREE IS NULL\n");
+        bst->root = create_bst_node(value);
         bst->amount++;
+        bst->deepth = 0;
         return;
     }
 
-    struct BstNode *current = bst->head;
+    struct BstNode *current = bst->root;
     struct BstNode *new_node = create_bst_node(value);
+    int deepth = 0;
 
-    // while(true) {
+    while (true)
+    {
 
-    // }
+        deepth++;
+        if (current->value < new_node->value)
+        {
+            if (current->right == NULL)
+            {
+                new_node->parent = current;
+                current->right = new_node;
+                bst->amount++;
+                bst->deepth = max(bst->deepth, deepth);
+                break;
+            }
+            current = current->right;
+        }
+        else
+        {
+            if (current->left == NULL)
+            {
+                new_node->parent = current;
+                current->left = new_node;
+                bst->amount++;
+                break;
+            }
+            current = current->left;
+        }
+    }
 }
