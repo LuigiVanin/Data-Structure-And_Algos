@@ -24,4 +24,8 @@ struct BstNode *create_bst_node(int value);
 
 void insert_bst(struct Bst *bst, int value);
 
+int bst_has_value(struct Bst bst, int value);
+
+struct BstNode *bst_search(struct Bst bst, int value);
+
 #endif

@@ -38,7 +38,6 @@ void insert_bst(struct Bst *bst, int value)
 
     if (bst->root == NULL)
     {
-        printf("THE TREE IS NULL\n");
         bst->root = create_bst_node(value);
         bst->amount++;
         bst->deepth = 0;
@@ -77,4 +76,44 @@ void insert_bst(struct Bst *bst, int value)
             current = current->left;
         }
     }
+}
+
+int bst_has_value(struct Bst bst, int value)
+{
+    struct BstNode *current = bst.root;
+
+    while (current != NULL)
+    {
+        if (current->value == value)
+            return true;
+        if (current->value < value)
+        {
+            current = current->right;
+        }
+        else
+        {
+            current = current->left;
+        }
+    }
+    return false;
+}
+
+struct BstNode *bst_search(struct Bst bst, int value)
+{
+    struct BstNode *current = bst.root;
+
+    while (current != NULL)
+    {
+        if (current->value == value)
+            return current;
+        if (current->value < value)
+        {
+            current = current->right;
+        }
+        else
+        {
+            current = current->left;
+        }
+    }
+    return NULL;
 }
