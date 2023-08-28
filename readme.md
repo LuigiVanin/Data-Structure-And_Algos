@@ -23,7 +23,7 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [x] ArrayQueue
 -   [ ] HashMap
     -   [ ] HashMap out of place
--   [ ] Binary tree
+-   [x] Binary Search Tree
 -   [ ] AVL
 -   [x] Graphs
     -   [x] Table
