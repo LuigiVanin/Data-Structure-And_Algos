@@ -21,8 +21,6 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
 -   [x] Queue
     -   [x] LinkedQueue
     -   [x] ArrayQueue
--   [ ] HashMap
-    -   [ ] HashMap out of place
 -   [x] Binary Search Tree
 -   [ ] AVL
 -   [x] Graphs
@@ -47,8 +45,6 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [x] DFS stack
     -   [x] BFS
     -   [x] Dijkstra
--   [ ] Special
-    -   [ ] Kennedys algorithm
 
 ## Ferramentas Utilizadas 🛠️
 

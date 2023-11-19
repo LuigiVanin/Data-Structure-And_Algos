@@ -31,6 +31,7 @@ add_executable(cpp-algo main.c
                graph/graph_adj.c
                include/utils.h
                utils/array.c
+               utils/number.c
                include/dfs.h
                graph/dfs.c
                graph/graph_matrix.c 
@@ -41,6 +42,10 @@ add_executable(cpp-algo main.c
                graph/dijkstra.c
                include/bst.h
                bst/bst.c
+               include/merge_sort.h
+               sorting/merge_sort.c
+               include/avl.h
+               bst/avl.c
                )
 
 

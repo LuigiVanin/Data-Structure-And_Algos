@@ -5,6 +5,7 @@
         "doublylinkedlist.h": "c",
         "linkedqueue.h": "c",
         "string_view": "c",
-        "graph_adj.h": "c"
+        "graph_adj.h": "c",
+        "avl.h": "c"
     }
 }

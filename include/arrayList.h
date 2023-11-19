@@ -6,7 +6,7 @@ struct ArrayList
     int capacidade;
     int tamanho;
     int *array;
-} array_list;
+};
 
 struct ArrayList InitArrayList(int capacidade);
 

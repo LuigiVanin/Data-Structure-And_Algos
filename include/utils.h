@@ -8,4 +8,6 @@ bool is_sorted(int *array, int size);
 void shuffle(int *array, int size);
 void print_boolean_areray(bool *array, int len);
 
+int max_number(int a, int b);
+
 #endif
