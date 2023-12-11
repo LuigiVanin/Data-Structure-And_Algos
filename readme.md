@@ -22,7 +22,7 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [x] LinkedQueue
     -   [x] ArrayQueue
 -   [x] Binary Search Tree
--   [ ] AVL
+-   [x] AVL
 -   [x] Graphs
     -   [x] Table
     -   [x] Adj
@@ -39,7 +39,6 @@ A linguagem escolhida para aboradar esses estudos foi C. Tal escolha foi feita, 
     -   [x] SelectionSort
     -   [x] BogoSort
     -   [x] QuickSort
-    -   [ ] MergeSort
 -   [x] Graph
     -   [x] DFS recursive
     -   [x] DFS stack

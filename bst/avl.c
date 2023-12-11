@@ -29,7 +29,7 @@ struct AvlNode* avl_search(struct AvlTree avl, int value) {
 
  left_balance(struct AvlNode* node) {
     struct AvlNode* y = node->right;
-    struct AvlNode* t2 = Y->left;
+    struct AvlNode* t2 = y->left;
 
     y->left= node;
     node->right = t2;
@@ -59,3 +59,39 @@ void get_balance(struct AvlNode* node) {
     }
     return node->left->height - node->right->height;
 }
+
+struct AvlNode* insert(struct AvlNode* node, int value) 
+{ 
+    if (node == NULL) 
+        return(newNode(value)); 
+  
+    if (value < node->value) 
+        node->left  = insert(node->left, value); 
+    else if (value > node->value) 
+        node->right = insert(node->right, value); 
+    else 
+        return node; 
+  
+    node->height = 1 + max(height(node->left), height(node->right)); 
+  
+    int balance = getBalance(node); 
+  
+    if (balance > 1 && value < node->left->value) 
+        return rightRotate(node); 
+  
+    if (balance < -1 && value > node->right->value) 
+        return leftRotate(node); 
+  
+    if (balance > 1 && value > node->left->value) 
+    { 
+        node->left =  leftRotate(node->left); 
+        return rightRotate(node); 
+    } 
+  
+    if (balance < -1 && value < node->right->value) 
+    { 
+        node->right = rightRotate(node->right); 
+        return leftRotate(node); 
+    } 
+    return node; 
+} 
